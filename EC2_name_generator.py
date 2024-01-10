@@ -12,9 +12,15 @@ is_year = input("What year is it? ")
 n = 0
 # Naming convention is department name-characters
 
+def generate_random_character(size=7, all_characters=None):
+ all_characters = random.choice(string.ascii_letters) + random.choice(string.ascii_uppercase) + random.choice(string.punctuation) + random.choice(string.digits)
+ return ''.join(all_characters)
+
 while n < is_quantity:
-  print(is_department_name,'_',is_date,'_',is_year)
+  print(is_department_name,'_',is_date,'_',is_year,generate_random_character(), sep='')
   n += 1
+  
+  
 # def generate_random_character(size=7, all_characters=None):
 #  all_characters = random.choice(string.ascii_letters) + random.choice(string.ascii_uppercase) + random.choice(string.punctuation) + random.choice(string.digits)
 #  return ''.join(all_characters)
