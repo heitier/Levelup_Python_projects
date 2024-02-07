@@ -10,9 +10,9 @@ for reservation in response['Reservations']:
         instance['ImageId'],instance['VpcId'],instance['SubnetId'],
         instance['State']['Name'],)
             
-        for tag in instance['Tags']:
-            if tag['Key'] == 'Name':
-                print(tag['Value'])
+        # for tag in instance['Tags']:
+        #     if tag['Key'] == 'Name':
+        #         print(tag['Value'])
         
         for sg in instance['SecurityGroups']:
             print(sg['GroupName'], sg['GroupId'])
